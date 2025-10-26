@@ -18,7 +18,7 @@ public class Player extends GameObject {
         super(x, y, w, h, speed); 
         try {
             for (int i = 1; i <= 4; i++) {
-                runFrames.add(new ImageIcon("player" + i + ".png").getImage()); 
+                runFrames.add(new ImageIcon("img/player" + i + ".png").getImage()); 
             }
         } catch (Exception e) {
             System.err.println("Error loading player run frames: " + e.getMessage());

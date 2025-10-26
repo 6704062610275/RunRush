@@ -112,10 +112,10 @@ public class Runrush extends JPanel implements ActionListener, KeyListener {
 
     private void loadImages() {
         try {
-            this.bg = ImageIO.read(new File("BG.png")); 
-            this.bg1 = ImageIO.read(new File("BG1.png")); 
-            this.bg2 = ImageIO.read(new File("BG2.png")); 
-            this.gameOverImage = ImageIO.read(new File("over2.png")); 
+            this.bg = ImageIO.read(new File("img/BG.png")); 
+            this.bg1 = ImageIO.read(new File("img/BG1.png")); 
+            this.bg2 = ImageIO.read(new File("img/BG2.png")); 
+            this.gameOverImage = ImageIO.read(new File("img/over2.png")); 
         } catch (IOException e) {
             System.err.println("Error loading images. Using placeholders. " + e.getMessage());
             this.bg = createPlaceholderImage(Color.GREEN);
@@ -226,26 +226,26 @@ public class Runrush extends JPanel implements ActionListener, KeyListener {
         if (currentLevel == 2) {
             int kindLevel2 = rand.nextInt(2); 
             if (kindLevel2 == 0) {
-                w = 90; h = 120; path = "rock.png"; 
+                w = 90; h = 120; path = "img/rock.png"; 
             } else {
-                w = 90; h = 90; path = "fire.png"; 
+                w = 90; h = 90; path = "img/fire.png"; 
             }
         } else if (currentLevel == 3) {
             int kindLevel3 = rand.nextInt(3); 
             
             if (kindLevel3 == 0) {
-                w = 70; h = 70; path = "donut.png"; 
+                w = 70; h = 70; path = "img/donut.png"; 
             } else if (kindLevel3 == 1) {
-                w = 70; h = 70; path = "cookie.png"; 
+                w = 70; h = 70; path = "img/cookie.png"; 
             } else { 
-                w = 70; h = 70; path = "j.png"; 
+                w = 70; h = 70; path = "img/j.png"; 
             }
         } else {
             switch (kind) {
-                case 0: w = 60; h = 80; path = "motor.png"; break;
-                case 1: w = 80; h = 110; path = "van.png"; break;
-                case 2: w = 65; h = 90; path = "car.png"; break;
-                default: w = 65; h = 90; path = "car.png"; break; 
+                case 0: w = 60; h = 80; path = "img/motor.png"; break;
+                case 1: w = 80; h = 110; path = "img/van.png"; break;
+                case 2: w = 65; h = 90; path = "img/car.png"; break;
+                default: w = 65; h = 90; path = "img/car.png"; break; 
             }
         }
         

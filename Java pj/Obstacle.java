@@ -33,10 +33,6 @@ public class Obstacle {
         return img;
     }
 
-    /**
-     * 💡 เมธอดที่ถูกเพิ่มเพื่อแก้ปัญหา The method setSpeed is undefined
-     * อนุญาตให้อัปเดตความเร็วของ Obstacle ที่กำลังเคลื่อนที่อยู่
-     */
     public void setSpeed(int newSpeed) {
         this.speed = newSpeed;
     }
@@ -55,14 +51,12 @@ public class Obstacle {
     }
 
     public Rectangle getHitBox() {
-        // ปรับ Hit box เล็กน้อยเพื่อให้ชนไม่ยากเกินไป
+        // ปรับ Hit box 
         int hitBoxX = x + (w / 4);
         int hitBoxY = y + (h / 4);
         int hitBoxW = w / 2;
         int hitBoxH = h / 2;
         return new Rectangle(hitBoxX, hitBoxY, hitBoxW, hitBoxH);
     }
-
-    // Getters
     public int getY() { return y; }
 }
